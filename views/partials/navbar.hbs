@@ -1,0 +1,19 @@
+<nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Lab 11</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        {{#if isIndex}}
+        <li class="active"><a href="/">Users</a></li>
+        {{else}}
+        <li><a href="/">Users</a></li>
+        {{/if}}
+
+        {{#if isAdd}}
+        <li class="active"><a href="/add">Add user</a></li>
+        {{else}}
+        <li><a href="/add">Add user</a></li>
+        {{/if}}
+      </ul>
+    </div>
+</nav>

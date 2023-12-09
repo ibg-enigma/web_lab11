@@ -1,0 +1,23 @@
+<h2>Users page</h2>
+
+{{#if users.length}}
+<ul>
+    {{#each users}}
+    <li class="user">
+        <form action="/remove" method="POST">
+            <p>First name: {{first_name}}</p>
+            <p>Last name: {{last_name}}</p>
+            <p>Email: {{email}}</p>
+            <p>Age: {{age}}</p>
+
+            <input type="hidden" value="{{_id}}" name="id">
+
+            <button class="btn btn-small" type="submit">Remove</button>
+        </form>
+    </li>
+    {{/each}}
+</ul>
+
+{{else}}
+<p>No users!</p>
+{{/if}}
